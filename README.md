@@ -1,176 +1,66 @@
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                    ANIMATED WAVE HEADER                    -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--   S U B A S H   V   ·   GitHub Profile README                  -->
+<!--   UPLOAD this file — do not copy-paste it — so the line        -->
+<!--   breaks survive. Repo → Add file → Upload files.              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667EEA,50:764BA2,100:F093FB&height=220&section=header&text=Subash%20V&fontSize=70&fontColor=ffffff&fontAlignY=32&desc=Full-Stack%20Web%20Developer&descAlignY=52&descSize=20&animation=fadeIn" />
+<!-- ─────────────  HERO  ───────────── -->
 
-<!-- ═══════════════ TYPING ANIMATION ═══════════════ -->
-
-<a href="https://github.com/subashvs7">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&lines=React+%2B+Laravel+Developer;Building+full-stack+web+applications;Config-driven+system+architecture;Always+shipping+%F0%9F%9A%80" alt="Typing SVG" />
-</a>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0F0C29,40:302B63,100:24243E&height=260&section=header&text=SUBASH%20V&fontSize=78&fontColor=E9D8FD&fontAlignY=36&desc=%E2%97%86%20%20F%20U%20L%20L%20-%20S%20T%20A%20C%20K%20%20%20D%20E%20V%20E%20L%20O%20P%20E%20R%20%20%E2%97%86&descAlignY=56&descSize=15&animation=fadeIn" />
 
 <br/>
 
-<!-- ═══════════════ FLOATING BADGES ═══════════════ -->
+<!-- ─────────────  TYPEWRITER  ───────────── -->
 
-<img src="https://komarev.com/ghpvc/?username=subashvs7&label=Profile%20Views&color=8B5CF6&style=for-the-badge" alt="views" />
-<img src="https://img.shields.io/github/followers/subashvs7?label=Followers&style=for-the-badge&color=8B5CF6&labelColor=1a1b27" alt="followers" />
-<img src="https://img.shields.io/badge/Location-India-8B5CF6?style=for-the-badge&labelColor=1a1b27" alt="location" />
-
-</div>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&pause=900&color=C4B5FD&center=true&vCenter=true&width=700&height=45&lines=React+%E2%9A%A1+Laravel+%E2%9A%A1+TypeScript;Architecting+config-driven+systems;ERP+%C2%B7+MES+%C2%B7+SaaS+platforms;Turning+coffee+into+clean+commits" />
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                          ABOUT                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ─────────────  STATUS PILLS  ───────────── -->
 
-<img align="right" width="380" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" alt="coding" />
-
-### <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="28"> &nbsp;About Me
-
-```typescript
-const subash = {
-  role:      "Full-Stack Web Developer",
-  location:  "India 🇮🇳",
-  stack:     ["React", "Laravel", "TypeScript", "MySQL"],
-  focus:     "Config-driven, dynamic architectures",
-  building:  ["ERP / MES systems", "SaaS platforms"],
-  learning:  ["Docker", "CI/CD", "DevOps"],
-  motto:     "Make it work → make it right → make it fast"
-};
-```
-
-- 🔭 &nbsp;Currently building **ERP & SaaS** systems with React + Laravel
-- 🌱 &nbsp;Levelling up on **DevOps** — containers, pipelines, deployment
-- 💡 &nbsp;I like **schema-driven UIs** — config in, interface out
-- 💬 &nbsp;Ask me about **React**, **Laravel**, **MySQL**, or REST API design
-- ⚡ &nbsp;Fun fact: I debug better at 2 AM than at 2 PM
-
-<br clear="right"/>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                        TECH STACK                           -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## ⚡ Tech Arsenal
-
-<img src="https://skillicons.dev/icons?i=react,ts,js,tailwind,html,css&theme=dark" />
-<br/>
-<img src="https://skillicons.dev/icons?i=laravel,php,mysql,nodejs,redis&theme=dark" />
-<br/>
-<img src="https://skillicons.dev/icons?i=git,github,docker,vscode,postman,linux&theme=dark" />
+<img src="https://komarev.com/ghpvc/?username=subashvs7&label=VISITORS&color=8B5CF6&style=for-the-badge" />
+&nbsp;
+<img src="https://img.shields.io/github/followers/subashvs7?label=FOLLOWERS&style=for-the-badge&color=8B5CF6&labelColor=0F0C29" />
+&nbsp;
+<img src="https://img.shields.io/badge/BASED%20IN-INDIA-8B5CF6?style=for-the-badge&labelColor=0F0C29" />
+&nbsp;
+<img src="https://img.shields.io/badge/OPEN%20TO-WORK-22C55E?style=for-the-badge&labelColor=0F0C29" />
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-<img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-<img src="https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<!-- ─────────────  SNAKE  (needs snake.yml workflow)  ───────────── -->
+
+<img width="100%" src="https://raw.githubusercontent.com/subashvs7/subashvs7/output/github-contribution-grid-snake-dark.svg" />
 
 </div>
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                    3D CONTRIBUTION GRAPH                    -->
-<!--   Generated by the profile-3d-contrib GitHub Action.        -->
-<!--   See setup notes at the bottom of this file.               -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## 🧊 My Contributions in 3D
-
-<img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph" />
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                          STATS                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## 📊 GitHub Stats
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=subashvs7&show_icons=true&count_private=true&hide_border=true&title_color=A78BFA&icon_color=F093FB&text_color=c9d1d9&bg_color=0d1117" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=subashvs7&layout=compact&hide_border=true&title_color=A78BFA&text_color=c9d1d9&bg_color=0d1117" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com?user=subashvs7&hide_border=true&background=0d1117&stroke=A78BFA&ring=F093FB&fire=F093FB&currStreakLabel=A78BFA&sideLabels=c9d1d9&dates=8b949e" />
-
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=subashvs7&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=8" />
-
-<br/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=subashvs7&bg_color=0d1117&color=A78BFA&line=F093FB&point=ffffff&area=true&hide_border=true" />
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                        PROJECTS                             -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-## 🚀 Featured Projects
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                            ABOUT                               -->
+<!-- ══════════════════════════════════════════════════════════════ -->
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="55%" valign="top">
 
-### 📋 Task Management
-Full task tracking app built with TypeScript — boards, assignments, status flow.
+<h3>&nbsp;◆&nbsp; whoami</h3>
 
-`TypeScript` `React`
-
-[**→ View Repo**](https://github.com/subashvs7/task-management)
-
-</td>
-<td width="50%" valign="top">
-
-### 💰 Budget App
-Personal finance tracker on Laravel with Blade templating and MySQL.
-
-`Laravel` `Blade` `MySQL`
-
-[**→ View Repo**](https://github.com/subashvs7/budgetapp)
+<ul>
+<li>🏗️ &nbsp;Building <b>ERP &amp; SaaS</b> platforms on React + Laravel</li>
+<li>🧩 &nbsp;Obsessed with <b>config-driven UIs</b> — schema in, interface out</li>
+<li>🐳 &nbsp;Levelling up on <b>Docker, CI/CD &amp; deployment</b></li>
+<li>🗄️ &nbsp;Comfortable from <b>MySQL schema</b> to <b>pixel polish</b></li>
+<li>💬 &nbsp;Ask me about React, Laravel, REST design, query tuning</li>
+<li>⚡ &nbsp;Fun fact — I debug better at 2 AM than at 2 PM</li>
+</ul>
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<td width="45%" valign="top">
 
-### 📊 Laravel Dashboard
-Admin dashboard with charts, tables and role-based access control.
-
-`Laravel` `Blade` `Charts`
-
-[**→ View Repo**](https://github.com/subashvs7/laravel-dashboard)
-
-</td>
-<td width="50%" valign="top">
-
-### 🔴 React Reddit
-Reddit client in React — live feed fetching, search, and filtering.
-
-`React` `JavaScript` `REST API`
-
-[**→ View Repo**](https://github.com/subashvs7/react-reddit)
+<img width="100%" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" />
 
 </td>
 </tr>
@@ -178,29 +68,142 @@ Reddit client in React — live feed fetching, search, and filtering.
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                         CONNECT                             -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                         TECH STACK                             -->
+<!-- ══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## 🤝 Connect With Me
+<h2>◆ &nbsp;T E C H &nbsp; S T A C K&nbsp; ◆</h2>
 
-<a href="https://linkedin.com/in/YOUR-LINKEDIN">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-<a href="mailto:YOUR-EMAIL@gmail.com">
-  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-<a href="https://twitter.com/YOUR-HANDLE">
-  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
-</a>
+<b>Frontend</b><br/>
+<img src="https://skillicons.dev/icons?i=react,ts,js,tailwind,html,css,vite&theme=dark" />
 
 <br/><br/>
 
-***"Code is like humor. When you have to explain it, it's bad."***
+<b>Backend &amp; Data</b><br/>
+<img src="https://skillicons.dev/icons?i=laravel,php,nodejs,mysql,redis,sqlite&theme=dark" />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:F093FB,50:764BA2,100:667EEA&height=140&section=footer" />
+<br/><br/>
 
-</div>#   s u b a s h v s 7  
- 
+<b>Tooling</b><br/>
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,postman,nginx&theme=dark" />
+
+</div>
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                   3D CONTRIBUTION SKYLINE                      -->
+<!--   Rendered by the profile-3d-contrib Action (profile-3d.yml)   -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<h2>◆ &nbsp;C O N T R I B U T I O N &nbsp; S K Y L I N E&nbsp; ◆</h2>
+
+<i>An isometric render of every commit I've pushed — rebuilt nightly.</i>
+
+<br/><br/>
+
+<img width="100%" src="./profile-3d-contrib/profile-night-rainbow.svg" />
+
+</div>
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                            METRICS                             -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<h2>◆ &nbsp;M E T R I C S&nbsp; ◆</h2>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=subashvs7&show_icons=true&count_private=true&hide_border=true&title_color=C4B5FD&icon_color=F0ABFC&text_color=CBD5E1&bg_color=0F0C29" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=subashvs7&layout=compact&langs_count=8&hide_border=true&title_color=C4B5FD&text_color=CBD5E1&bg_color=0F0C29" />
+
+<br/><br/>
+
+<img src="https://streak-stats.demolab.com?user=subashvs7&hide_border=true&background=0F0C29&stroke=8B5CF6&ring=F0ABFC&fire=F0ABFC&currStreakLabel=C4B5FD&sideLabels=CBD5E1&dates=94A3B8" />
+
+<br/><br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=subashvs7&theme=nord&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" />
+
+<br/><br/>
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=subashvs7&bg_color=0F0C29&color=C4B5FD&line=F0ABFC&point=FFFFFF&area=true&area_color=8B5CF6&hide_border=true&custom_title=Commit%20Activity" />
+
+</div>
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                          PROJECTS                              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+<h2>◆ &nbsp;S E L E C T E D &nbsp; W O R K&nbsp; ◆</h2>
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>📋 &nbsp;Task Management</h3>
+<p>Board-based task tracker — assignments, status transitions, filtering. Written in TypeScript for end-to-end type safety.</p>
+<p><code>TypeScript</code> &nbsp;<code>React</code></p>
+<a href="https://github.com/subashvs7/task-management"><b>Explore →</b></a>
+</td>
+<td width="50%" valign="top">
+<h3>💰 &nbsp;Budget App</h3>
+<p>Personal finance tracker on Laravel. Category budgets, transaction history and monthly rollups backed by MySQL.</p>
+<p><code>Laravel</code> &nbsp;<code>Blade</code> &nbsp;<code>MySQL</code></p>
+<a href="https://github.com/subashvs7/budgetapp"><b>Explore →</b></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>📊 &nbsp;Laravel Dashboard</h3>
+<p>Admin panel with charts, sortable data tables and role-based access control — the foundation I reuse across projects.</p>
+<p><code>Laravel</code> &nbsp;<code>Blade</code> &nbsp;<code>Charts</code></p>
+<a href="https://github.com/subashvs7/laravel-dashboard"><b>Explore →</b></a>
+</td>
+<td width="50%" valign="top">
+<h3>🔴 &nbsp;React Reddit</h3>
+<p>Reddit client consuming the public API — live subreddit feeds, search, and client-side filtering with hooks.</p>
+<p><code>React</code> &nbsp;<code>JavaScript</code> &nbsp;<code>REST</code></p>
+<a href="https://github.com/subashvs7/react-reddit"><b>Explore →</b></a>
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                           CONNECT                              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<h2>◆ &nbsp;L E T ' S &nbsp; T A L K&nbsp; ◆</h2>
+
+<a href="https://linkedin.com/in/YOUR-LINKEDIN">
+<img src="https://img.shields.io/badge/LinkedIn-0F0C29?style=for-the-badge&logo=linkedin&logoColor=0A66C2" /></a>
+&nbsp;
+<a href="mailto:YOUR-EMAIL@gmail.com">
+<img src="https://img.shields.io/badge/Email-0F0C29?style=for-the-badge&logo=gmail&logoColor=EA4335" /></a>
+&nbsp;
+<a href="https://twitter.com/YOUR-HANDLE">
+<img src="https://img.shields.io/badge/Twitter-0F0C29?style=for-the-badge&logo=x&logoColor=FFFFFF" /></a>
+&nbsp;
+<a href="https://github.com/subashvs7">
+<img src="https://img.shields.io/badge/GitHub-0F0C29?style=for-the-badge&logo=github&logoColor=FFFFFF" /></a>
+
+<br/><br/>
+
+<i>"Make it work. Make it right. Make it fast."</i>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:24243E,50:302B63,100:0F0C29&height=150&section=footer" />
+
+</div>
