@@ -101,14 +101,55 @@ Then, per repo, the three things that actually change how the tab reads:
 - **Description** — shown inline in the list. Non-negotiable.
 - **Topics** — render as pills under each repo. 4–6 each.
 - **Social preview image** — repo *Settings → Social preview*, 1280×640.
-  This is what shows when the repo is shared anywhere.
+  Cards are already generated for the pinned six; see §5.
 
 Archive dead repos (*Settings → Archive*) so they sort to the bottom instead of
 padding the list.
 
+> **On 3D here:** you cannot put the contribution skyline — or any image — on
+> the Repositories tab. GitHub renders that list from its own templates: no
+> README hook, no custom CSS, no injected HTML. Only the fields above render.
+> The social preview cards in §5 are the closest thing a repo has to cover art.
+
 ---
 
-## 5 · Pinned repositories
+## 5 · Social preview cards
+
+`social-previews/` holds a 1280×640 PNG per pinned repo, themed to match the
+profile: isometric voxel plinth, violet gradient, tech pills. Each skyline is
+seeded from the repo name, so every card is unique but stable across rebuilds.
+
+Regenerate any time (needs Chrome, which the script auto-detects):
+
+```bash
+node scripts/gen-social-previews.mjs
+```
+
+Edit the `REPOS` array in
+[`scripts/gen-social-previews.mjs`](scripts/gen-social-previews.mjs) to change
+titles, taglines or tags, or to add the remaining eight repos.
+
+**Uploading is manual — GitHub has no API for this field.** For each repo:
+
+1. `https://github.com/subashvs7/<repo>/settings`
+2. Scroll to **Social preview** → **Edit** → **Upload an image**
+3. Pick `social-previews/<repo>.png`
+
+Where these actually show up: link unfurls on LinkedIn, Slack, Discord, X and
+iMessage. They do **not** appear in the Repositories tab list.
+
+| File | Repo |
+|---|---|
+| `task-management.png` | task-management |
+| `laravel-dashboard.png` | laravel-dashboard |
+| `CRM-ZAZU.png` | CRM-ZAZU |
+| `budgetapp.png` | budgetapp |
+| `spicemart.png` | spicemart |
+| `react-reddit.png` | react-reddit |
+
+---
+
+## 6 · Pinned repositories
 
 The strongest lever on the Overview tab. Profile → **Customize your pins**.
 
@@ -125,7 +166,7 @@ A pinned repo with no description is a wasted slot, so run §4 first.
 
 ---
 
-## 6 · Per-repo READMEs
+## 7 · Per-repo READMEs
 
 `templates/REPO_README_TEMPLATE.md` is a designed README matching the profile
 theme — hero banner, stack icons, live shields, features table, setup steps.
@@ -136,7 +177,7 @@ pinned ones; the rest can wait.
 
 ---
 
-## 7 · Projects and Stars tabs
+## 8 · Projects and Stars tabs
 
 **Projects** — an empty tab is worse than a hidden one. Either build one real
 board (<https://github.com/users/subashvs7/projects>) with a description and a
@@ -153,7 +194,7 @@ design until then; ignore it.
 
 ---
 
-## 8 · Fill in the placeholders
+## 9 · Fill in the placeholders
 
 Still literal `YOUR-*` values in `README.md`:
 
