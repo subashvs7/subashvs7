@@ -1,0 +1,118 @@
+name: Profile Metrics
+
+# Renders every stats panel INTO this repo as an SVG under assets/.
+# This is deliberate: the public github-readme-stats / trophy /
+# activity-graph instances are dead (503 / 402 DEPLOYMENT_DISABLED),
+# so nothing in the README depends on a third-party server any more.
+
+on:
+  schedule:
+    - cron: "30 18 * * *"     # 00:00 IST daily
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/metrics.yml
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    env:
+      # METRICS_TOKEN is a classic PAT (scopes: public_repo, read:user).
+      # Without it the panels still render, just with less depth.
+      TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # ── 1 · Overview: activity, community, repo totals ──────────────
+      - name: Overview panel
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ env.TOKEN }}
+          user: subashvs7
+          filename: assets/metrics-overview.svg
+          template: classic
+          base: header, activity, community, repositories
+          config_timezone: Asia/Kolkata
+          config_theme: dark
+          output_action: none
+          plugins_errors_fatal: no
+
+      # ── 2 · Languages ──────────────────────────────────────────────
+      - name: Languages panel
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ env.TOKEN }}
+          user: subashvs7
+          filename: assets/metrics-languages.svg
+          base: ""
+          config_timezone: Asia/Kolkata
+          config_theme: dark
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_colors: "0:8B5CF6, 1:F0ABFC, 2:C4B5FD, 3:60A5FA"
+          plugin_languages_details: bytes-size, percentage
+          output_action: none
+          plugins_errors_fatal: no
+
+      # ── 3 · Isometric calendar (3D commit heatmap) ─────────────────
+      - name: Isocalendar panel
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ env.TOKEN }}
+          user: subashvs7
+          filename: assets/metrics-isocalendar.svg
+          base: ""
+          config_timezone: Asia/Kolkata
+          config_theme: dark
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          output_action: none
+          plugins_errors_fatal: no
+
+      # ── 4 · Achievements — replaces the dead trophy service ────────
+      - name: Achievements panel
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ env.TOKEN }}
+          user: subashvs7
+          filename: assets/metrics-achievements.svg
+          base: ""
+          config_timezone: Asia/Kolkata
+          config_theme: dark
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
+          output_action: none
+          plugins_errors_fatal: no
+
+      # ── 5 · Coding habits — replaces the dead activity graph ───────
+      - name: Habits panel
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ env.TOKEN }}
+          user: subashvs7
+          filename: assets/metrics-habits.svg
+          base: ""
+          config_timezone: Asia/Kolkata
+          config_theme: dark
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          output_action: none
+          plugins_errors_fatal: no
+
+      - name: Commit rendered panels
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A assets
+          git diff --staged --quiet && echo "no changes" && exit 0
+          git commit -m "chore(metrics): refresh profile panels"
+          git push

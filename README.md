@@ -1,38 +1,45 @@
 <!-- ══════════════════════════════════════════════════════════════ -->
 <!--   S U B A S H   V   ·   GitHub Profile README                  -->
-<!--   UPLOAD this file — do not copy-paste it — so the line        -->
-<!--   breaks survive. Repo → Add file → Upload files.              -->
+<!--                                                                -->
+<!--   Every remote image below was reachability-checked.           -->
+<!--   Panels under ./assets/ and ./profile-3d-contrib/ are         -->
+<!--   generated INTO this repo by Actions — no third-party         -->
+<!--   render server can take them down. See SETUP.md.              -->
+<!--                                                                -->
+<!--   Table cells use raw HTML on purpose: markdown inside <td>    -->
+<!--   renders inconsistently on GitHub.                            -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 <!-- ─────────────  HERO  ───────────── -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0F0C29,40:302B63,100:24243E&height=260&section=header&text=SUBASH%20V&fontSize=78&fontColor=E9D8FD&fontAlignY=36&desc=%E2%97%86%20%20F%20U%20L%20L%20-%20S%20T%20A%20C%20K%20%20%20D%20E%20V%20E%20L%20O%20P%20E%20R%20%20%E2%97%86&descAlignY=56&descSize=15&animation=fadeIn" />
-
-<br/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0F0C29,40:302B63,100:24243E&height=270&section=header&text=SUBASH%20V&fontSize=78&fontColor=E9D8FD&fontAlignY=36&desc=%E2%97%86%20%20F%20U%20L%20L%20-%20S%20T%20A%20C%20K%20%20%20D%20E%20V%20E%20L%20O%20P%20E%20R%20%20%E2%97%86&descAlignY=56&descSize=15&animation=fadeIn" alt="Subash V — Full-Stack Developer" />
 
 <!-- ─────────────  TYPEWRITER  ───────────── -->
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&pause=900&color=C4B5FD&center=true&vCenter=true&width=700&height=45&lines=React+%E2%9A%A1+Laravel+%E2%9A%A1+TypeScript;Architecting+config-driven+systems;ERP+%C2%B7+MES+%C2%B7+SaaS+platforms;Turning+coffee+into+clean+commits" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&pause=900&color=C4B5FD&center=true&vCenter=true&width=720&height=45&lines=React+%E2%9A%A1+Laravel+%E2%9A%A1+TypeScript;Architecting+config-driven+systems;ERP+%C2%B7+MES+%C2%B7+SaaS+platforms;Turning+coffee+into+clean+commits" alt="React, Laravel, TypeScript — architecting config-driven systems" />
 
 <br/>
 
 <!-- ─────────────  STATUS PILLS  ───────────── -->
 
-<img src="https://komarev.com/ghpvc/?username=subashvs7&label=VISITORS&color=8B5CF6&style=for-the-badge" />
-&nbsp;
-<img src="https://img.shields.io/github/followers/subashvs7?label=FOLLOWERS&style=for-the-badge&color=8B5CF6&labelColor=0F0C29" />
-&nbsp;
-<img src="https://img.shields.io/badge/BASED%20IN-INDIA-8B5CF6?style=for-the-badge&labelColor=0F0C29" />
-&nbsp;
-<img src="https://img.shields.io/badge/OPEN%20TO-WORK-22C55E?style=for-the-badge&labelColor=0F0C29" />
+<img src="https://img.shields.io/badge/BASED%20IN-INDIA-8B5CF6?style=for-the-badge&labelColor=0F0C29" alt="Based in India" />
+<img src="https://img.shields.io/badge/OPEN%20TO-WORK-22C55E?style=for-the-badge&labelColor=0F0C29" alt="Open to work" />
+<img src="https://img.shields.io/github/followers/subashvs7?label=FOLLOWERS&style=for-the-badge&color=8B5CF6&labelColor=0F0C29" alt="Followers" />
+<img src="https://komarev.com/ghpvc/?username=subashvs7&label=VISITORS&color=8B5CF6&style=for-the-badge" alt="Profile views" />
 
 <br/><br/>
 
-<!-- ─────────────  SNAKE  (needs snake.yml workflow)  ───────────── -->
+<!-- ─────────────  SNAKE  (light + dark aware)  ───────────── -->
 
-<img width="100%" src="https://raw.githubusercontent.com/subashvs7/subashvs7/output/github-contribution-grid-snake-dark.svg" />
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/subashvs7/subashvs7/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/subashvs7/subashvs7/output/github-contribution-grid-snake.svg" />
+  <img width="100%" src="https://raw.githubusercontent.com/subashvs7/subashvs7/output/github-contribution-grid-snake-dark.svg" alt="Snake eating my contribution graph" />
+</picture>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F0C29,50:8B5CF6,100:0F0C29&height=3&section=header" alt="" />
 
 </div>
 
@@ -44,23 +51,30 @@
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="56%" valign="top">
 
 <h3>&nbsp;◆&nbsp; whoami</h3>
 
+<pre><code>const subash = {
+  role     : "Full-Stack Developer",
+  stack    : ["React", "TypeScript", "Laravel", "MySQL"],
+  building : ["ERP", "MES", "SaaS platforms"],
+  obsession: "config-driven UIs — schema in, interface out",
+  learning : ["Docker", "CI/CD", "deployment"],
+  debugsAt : "2 AM, unreasonably well",
+};</code></pre>
+
 <ul>
 <li>🏗️ &nbsp;Building <b>ERP &amp; SaaS</b> platforms on React + Laravel</li>
-<li>🧩 &nbsp;Obsessed with <b>config-driven UIs</b> — schema in, interface out</li>
-<li>🐳 &nbsp;Levelling up on <b>Docker, CI/CD &amp; deployment</b></li>
+<li>🧩 &nbsp;Schema in, interface out — <b>config-driven UIs</b></li>
 <li>🗄️ &nbsp;Comfortable from <b>MySQL schema</b> to <b>pixel polish</b></li>
 <li>💬 &nbsp;Ask me about React, Laravel, REST design, query tuning</li>
-<li>⚡ &nbsp;Fun fact — I debug better at 2 AM than at 2 PM</li>
 </ul>
 
 </td>
-<td width="45%" valign="top">
+<td width="44%" valign="top">
 
-<img width="100%" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" />
+<img width="100%" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" alt="Developer at work" />
 
 </td>
 </tr>
@@ -76,18 +90,68 @@
 
 <h2>◆ &nbsp;T E C H &nbsp; S T A C K&nbsp; ◆</h2>
 
-<b>Frontend</b><br/>
-<img src="https://skillicons.dev/icons?i=react,ts,js,tailwind,html,css,vite&theme=dark" />
+<table>
+<tr>
+<td align="center" width="33%">
+<b>Frontend</b><br/><br/>
+<img src="https://skillicons.dev/icons?i=react,ts,js,tailwind&theme=dark" alt="React, TypeScript, JavaScript, Tailwind" /><br/>
+<img src="https://skillicons.dev/icons?i=html,css,vite&theme=dark" alt="HTML, CSS, Vite" />
+</td>
+<td align="center" width="33%">
+<b>Backend &amp; Data</b><br/><br/>
+<img src="https://skillicons.dev/icons?i=laravel,php,nodejs&theme=dark" alt="Laravel, PHP, Node.js" /><br/>
+<img src="https://skillicons.dev/icons?i=mysql,redis,sqlite&theme=dark" alt="MySQL, Redis, SQLite" />
+</td>
+<td align="center" width="33%">
+<b>Tooling</b><br/><br/>
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux&theme=dark" alt="Git, GitHub, Docker, Linux" /><br/>
+<img src="https://skillicons.dev/icons?i=vscode,postman,nginx&theme=dark" alt="VS Code, Postman, Nginx" />
+</td>
+</tr>
+</table>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F0C29,50:8B5CF6,100:0F0C29&height=3&section=header" alt="" />
+
+</div>
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                            METRICS                             -->
+<!--   Generated by .github/workflows/metrics.yml into ./assets     -->
+<!--   so they can never 404 or rate-limit.                         -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<h2>◆ &nbsp;M E T R I C S&nbsp; ◆</h2>
+
+<img width="88%" src="./assets/metrics-overview.svg" alt="Activity and community overview" />
+
+<br/>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<img width="100%" src="./assets/metrics-languages.svg" alt="Most used languages" />
+</td>
+<td width="50%" valign="top">
+<img width="100%" src="./assets/metrics-achievements.svg" alt="GitHub achievements" />
+</td>
+</tr>
+</table>
+
+<img width="88%" src="./assets/metrics-isocalendar.svg" alt="Isometric commit calendar" />
 
 <br/><br/>
 
-<b>Backend &amp; Data</b><br/>
-<img src="https://skillicons.dev/icons?i=laravel,php,nodejs,mysql,redis,sqlite&theme=dark" />
+<img src="https://streak-stats.demolab.com?user=subashvs7&hide_border=true&background=0F0C29&stroke=8B5CF6&ring=F0ABFC&fire=F0ABFC&currStreakLabel=C4B5FD&sideLabels=CBD5E1&dates=94A3B8" alt="Commit streak" />
 
 <br/><br/>
 
-<b>Tooling</b><br/>
-<img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,postman,nginx&theme=dark" />
+<img width="88%" src="./assets/metrics-habits.svg" alt="Coding habits" />
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F0C29,50:8B5CF6,100:0F0C29&height=3&section=header" alt="" />
 
 </div>
 
@@ -95,7 +159,6 @@
 
 <!-- ══════════════════════════════════════════════════════════════ -->
 <!--                   3D CONTRIBUTION SKYLINE                      -->
-<!--   Rendered by the profile-3d-contrib Action (profile-3d.yml)   -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -106,34 +169,9 @@
 
 <br/><br/>
 
-<img width="100%" src="./profile-3d-contrib/profile-night-rainbow.svg" />
+<img width="100%" src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution skyline" />
 
-</div>
-
-<br/>
-
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!--                            METRICS                             -->
-<!-- ══════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-<h2>◆ &nbsp;M E T R I C S&nbsp; ◆</h2>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=subashvs7&show_icons=true&count_private=true&hide_border=true&title_color=C4B5FD&icon_color=F0ABFC&text_color=CBD5E1&bg_color=0F0C29" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=subashvs7&layout=compact&langs_count=8&hide_border=true&title_color=C4B5FD&text_color=CBD5E1&bg_color=0F0C29" />
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=subashvs7&hide_border=true&background=0F0C29&stroke=8B5CF6&ring=F0ABFC&fire=F0ABFC&currStreakLabel=C4B5FD&sideLabels=CBD5E1&dates=94A3B8" />
-
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=subashvs7&theme=nord&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" />
-
-<br/><br/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=subashvs7&bg_color=0F0C29&color=C4B5FD&line=F0ABFC&point=FFFFFF&area=true&area_color=8B5CF6&hide_border=true&custom_title=Commit%20Activity" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F0C29,50:8B5CF6,100:0F0C29&height=3&section=header" alt="" />
 
 </div>
 
@@ -141,6 +179,8 @@
 
 <!-- ══════════════════════════════════════════════════════════════ -->
 <!--                          PROJECTS                              -->
+<!--   Hand-built cards: the github-readme-stats /api/pin service    -->
+<!--   is down (503), so live data comes from shields.io instead.    -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -150,33 +190,74 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>📋 &nbsp;Task Management</h3>
-<p>Board-based task tracker — assignments, status transitions, filtering. Written in TypeScript for end-to-end type safety.</p>
+<h3>📋 &nbsp;<a href="https://github.com/subashvs7/task-management">Task Management</a></h3>
+<p>Board-based task tracker — assignments, status transitions and filtering, written in TypeScript for end-to-end type safety.</p>
+<p>
+<img src="https://img.shields.io/github/languages/top/subashvs7/task-management?style=flat-square&color=8B5CF6&labelColor=0F0C29" alt="" />
+<img src="https://img.shields.io/github/last-commit/subashvs7/task-management?style=flat-square&color=C4B5FD&labelColor=0F0C29" alt="" />
+</p>
 <p><code>TypeScript</code> &nbsp;<code>React</code></p>
-<a href="https://github.com/subashvs7/task-management"><b>Explore →</b></a>
 </td>
 <td width="50%" valign="top">
-<h3>💰 &nbsp;Budget App</h3>
-<p>Personal finance tracker on Laravel. Category budgets, transaction history and monthly rollups backed by MySQL.</p>
+<h3>💰 &nbsp;<a href="https://github.com/subashvs7/budgetapp">Budget App</a></h3>
+<p>Personal finance tracker on Laravel — category budgets, transaction history and monthly rollups backed by MySQL.</p>
+<p>
+<img src="https://img.shields.io/github/languages/top/subashvs7/budgetapp?style=flat-square&color=8B5CF6&labelColor=0F0C29" alt="" />
+<img src="https://img.shields.io/github/last-commit/subashvs7/budgetapp?style=flat-square&color=C4B5FD&labelColor=0F0C29" alt="" />
+</p>
 <p><code>Laravel</code> &nbsp;<code>Blade</code> &nbsp;<code>MySQL</code></p>
-<a href="https://github.com/subashvs7/budgetapp"><b>Explore →</b></a>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<h3>📊 &nbsp;Laravel Dashboard</h3>
+<h3>📊 &nbsp;<a href="https://github.com/subashvs7/laravel-dashboard">Laravel Dashboard</a></h3>
 <p>Admin panel with charts, sortable data tables and role-based access control — the foundation I reuse across projects.</p>
+<p>
+<img src="https://img.shields.io/github/languages/top/subashvs7/laravel-dashboard?style=flat-square&color=8B5CF6&labelColor=0F0C29" alt="" />
+<img src="https://img.shields.io/github/last-commit/subashvs7/laravel-dashboard?style=flat-square&color=C4B5FD&labelColor=0F0C29" alt="" />
+</p>
 <p><code>Laravel</code> &nbsp;<code>Blade</code> &nbsp;<code>Charts</code></p>
-<a href="https://github.com/subashvs7/laravel-dashboard"><b>Explore →</b></a>
 </td>
 <td width="50%" valign="top">
-<h3>🔴 &nbsp;React Reddit</h3>
-<p>Reddit client consuming the public API — live subreddit feeds, search, and client-side filtering with hooks.</p>
+<h3>🔴 &nbsp;<a href="https://github.com/subashvs7/react-reddit">React Reddit</a></h3>
+<p>Reddit client consuming the public API — live subreddit feeds, search and client-side filtering with hooks.</p>
+<p>
+<img src="https://img.shields.io/github/languages/top/subashvs7/react-reddit?style=flat-square&color=8B5CF6&labelColor=0F0C29" alt="" />
+<img src="https://img.shields.io/github/last-commit/subashvs7/react-reddit?style=flat-square&color=C4B5FD&labelColor=0F0C29" alt="" />
+</p>
 <p><code>React</code> &nbsp;<code>JavaScript</code> &nbsp;<code>REST</code></p>
-<a href="https://github.com/subashvs7/react-reddit"><b>Explore →</b></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>🏢 &nbsp;<a href="https://github.com/subashvs7/CRM-ZAZU">CRM ZAZU</a></h3>
+<p>Customer relationship manager — lead pipeline, contact history and follow-up scheduling on a Laravel backend.</p>
+<p>
+<img src="https://img.shields.io/github/languages/top/subashvs7/CRM-ZAZU?style=flat-square&color=8B5CF6&labelColor=0F0C29" alt="" />
+<img src="https://img.shields.io/github/last-commit/subashvs7/CRM-ZAZU?style=flat-square&color=C4B5FD&labelColor=0F0C29" alt="" />
+</p>
+<p><code>PHP</code> &nbsp;<code>Laravel</code> &nbsp;<code>MySQL</code></p>
+</td>
+<td width="50%" valign="top">
+<h3>🌶️ &nbsp;<a href="https://github.com/subashvs7/spicemart">Spicemart</a></h3>
+<p>E-commerce storefront — catalogue, cart and checkout flow, with an admin side for inventory and orders.</p>
+<p>
+<img src="https://img.shields.io/github/languages/top/subashvs7/spicemart?style=flat-square&color=8B5CF6&labelColor=0F0C29" alt="" />
+<img src="https://img.shields.io/github/last-commit/subashvs7/spicemart?style=flat-square&color=C4B5FD&labelColor=0F0C29" alt="" />
+</p>
+<p><code>PHP</code> &nbsp;<code>Laravel</code> &nbsp;<code>Blade</code></p>
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+<a href="https://github.com/subashvs7?tab=repositories">
+<img src="https://img.shields.io/badge/BROWSE%20ALL%20REPOSITORIES-8B5CF6?style=for-the-badge&labelColor=0F0C29&logo=github&logoColor=white" alt="Browse all repositories" /></a>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F0C29,50:8B5CF6,100:0F0C29&height=3&section=header" alt="" />
+
+</div>
 
 <br/>
 
@@ -189,21 +270,21 @@
 <h2>◆ &nbsp;L E T ' S &nbsp; T A L K&nbsp; ◆</h2>
 
 <a href="https://linkedin.com/in/YOUR-LINKEDIN">
-<img src="https://img.shields.io/badge/LinkedIn-0F0C29?style=for-the-badge&logo=linkedin&logoColor=0A66C2" /></a>
+<img src="https://img.shields.io/badge/LinkedIn-0F0C29?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
 &nbsp;
-<a href="mailto:YOUR-EMAIL@gmail.com">
-<img src="https://img.shields.io/badge/Email-0F0C29?style=for-the-badge&logo=gmail&logoColor=EA4335" /></a>
+<a href="mailto:subash07070707@gmail.com">
+<img src="https://img.shields.io/badge/Email-0F0C29?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
 &nbsp;
 <a href="https://twitter.com/YOUR-HANDLE">
-<img src="https://img.shields.io/badge/Twitter-0F0C29?style=for-the-badge&logo=x&logoColor=FFFFFF" /></a>
+<img src="https://img.shields.io/badge/Twitter-0F0C29?style=for-the-badge&logo=x&logoColor=FFFFFF" alt="Twitter" /></a>
 &nbsp;
 <a href="https://github.com/subashvs7">
-<img src="https://img.shields.io/badge/GitHub-0F0C29?style=for-the-badge&logo=github&logoColor=FFFFFF" /></a>
+<img src="https://img.shields.io/badge/GitHub-0F0C29?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub" /></a>
 
 <br/><br/>
 
 <i>"Make it work. Make it right. Make it fast."</i>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:24243E,50:302B63,100:0F0C29&height=150&section=footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:24243E,50:302B63,100:0F0C29&height=150&section=footer" alt="" />
 
 </div>

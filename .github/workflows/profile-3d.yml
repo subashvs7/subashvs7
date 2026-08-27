@@ -1,24 +1,34 @@
-name: GitHub-Profile-3D-Contrib
+name: 3D Contribution Skyline
+
+# Was schedule-only, so it had never run — which is why
+# ./profile-3d-contrib/profile-night-rainbow.svg 404'd in the README.
+# push + workflow_dispatch make it render on the very first commit.
 
 on:
   schedule:
-    # Runs every day at 18:30 UTC (midnight IST)
-    - cron: "30 18 * * *"
-  workflow_dispatch:   # lets you run it manually from the Actions tab
+    - cron: "30 18 * * *"     # 00:00 IST daily
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/profile-3d.yml
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - uses: actions/checkout@v4
 
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          # Renders the whole set: night-rainbow, night-view, season-animate,
+          # gitblock, etc. The README picks night-rainbow.
           SETTING_JSON: ""
 
       - name: Commit and push
@@ -26,5 +36,6 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A profile-3d-contrib
-          git commit -m "chore: regenerate 3D contribution graph" || exit 0
+          git diff --staged --quiet && echo "no changes" && exit 0
+          git commit -m "chore(3d): regenerate contribution skyline"
           git push
