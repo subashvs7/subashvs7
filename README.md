@@ -141,9 +141,7 @@
 </tr>
 </table>
 
-<img width="88%" src="./assets/metrics-isocalendar.svg" alt="Isometric commit calendar" />
-
-<br/><br/>
+<br/>
 
 <img src="https://streak-stats.demolab.com?user=subashvs7&hide_border=true&background=0F0C29&stroke=8B5CF6&ring=F0ABFC&fire=F0ABFC&currStreakLabel=C4B5FD&sideLabels=CBD5E1&dates=94A3B8" alt="Commit streak" />
 
@@ -163,13 +161,80 @@
 
 <div align="center">
 
-<h2>◆ &nbsp;C O N T R I B U T I O N &nbsp; S K Y L I N E&nbsp; ◆</h2>
+<h2>◆ &nbsp;3 D &nbsp; C O N T R I B U T I O N &nbsp; A N A L Y S I S&nbsp; ◆</h2>
 
-<i>An isometric render of every commit I've pushed — rebuilt nightly.</i>
+<i>Every commit I've pushed, rendered as isometric geometry.<br/>
+Rebuilt nightly by GitHub Actions and committed straight into this repo.</i>
 
 <br/><br/>
 
-<img width="100%" src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution skyline" />
+<!-- ── Primary skyline ── -->
+
+<img width="100%" src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution skyline, night rainbow" />
+
+<br/><br/>
+
+<b>◇ &nbsp;H O W &nbsp; T O &nbsp; R E A D &nbsp; I T&nbsp; ◇</b>
+
+<br/><br/>
+
+<table>
+<tr>
+<td align="center" width="25%"><b>Column</b><br/><sub>one calendar week</sub></td>
+<td align="center" width="25%"><b>Depth</b><br/><sub>day of that week</sub></td>
+<td align="center" width="25%"><b>Height</b><br/><sub>commits that day</sub></td>
+<td align="center" width="25%"><b>Hue</b><br/><sub>relative intensity</sub></td>
+</tr>
+</table>
+
+<br/>
+
+<!-- ── Alternate renders ── -->
+
+<b>◇ &nbsp;F O U R &nbsp; P R O J E C T I O N S&nbsp; ◇</b>
+
+<br/><br/>
+
+<table>
+<tr>
+<td align="center" width="50%">
+<b>GIT BLOCK</b><br/>
+<sub>Voxel stacks — reads raw commit volume per day</sub><br/><br/>
+<img width="100%" src="./profile-3d-contrib/profile-gitblock.svg" alt="Git block projection" />
+</td>
+<td align="center" width="50%">
+<b>NIGHT VIEW</b><br/>
+<sub>High contrast — isolates streaks against dead weeks</sub><br/><br/>
+<img width="100%" src="./profile-3d-contrib/profile-night-view.svg" alt="Night view projection" />
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<b>SEASONS</b><br/>
+<sub>Animated — palette shifts across the four quarters</sub><br/><br/>
+<img width="100%" src="./profile-3d-contrib/profile-season-animate.svg" alt="Seasonal animated projection" />
+</td>
+<td align="center" width="50%">
+<b>GROWTH</b><br/>
+<sub>Animated — the year building up commit by commit</sub><br/><br/>
+<img width="100%" src="./profile-3d-contrib/profile-green-animate.svg" alt="Green animated projection" />
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- ── Isometric calendar ── -->
+
+<b>◇ &nbsp;I S O M E T R I C &nbsp; C A L E N D A R&nbsp; ◇</b>
+
+<br/>
+
+<sub>The same year flattened to an isometric grid — easier to spot rhythm than magnitude</sub>
+
+<br/><br/>
+
+<img width="88%" src="./assets/metrics-isocalendar.svg" alt="Isometric commit calendar" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F0C29,50:8B5CF6,100:0F0C29&height=3&section=header" alt="" />
 

@@ -65,6 +65,17 @@ had never executed and the skyline image 404'd. It now has `push` and
   non-fatal (`plugins_errors_fatal: no`), so partial output still commits.
 - `snake.yml` — needs the `output` branch, which already exists here.
 
+### Known trap: `output_action`
+
+The first `metrics.yml` run failed at the commit step even though all five
+panels rendered. Cause: with `output_action: none`, the action writes the SVG
+to `/metrics_renders/` **inside its container**, never to the workspace — so a
+follow-up `git add -A assets` matches nothing and exits non-zero.
+
+Each step now uses `output_action: commit`, which writes the file through the
+GitHub API directly. **Do not** switch it back to `none` plus a manual commit
+step. `output_condition: changed` keeps it from producing empty commits.
+
 ---
 
 ## 4 · The Repositories tab
