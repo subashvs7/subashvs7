@@ -1,11 +1,13 @@
 name: Generate Snake Animation
 
+# DORMANT. The README no longer shows the snake -- with ~2 public events the
+# grid rendered empty. Left in place (manual trigger only) so it can be
+# switched back on if public activity picks up: re-add the schedule/push
+# triggers below and put the <picture> block back in README.md.
+# Safe to delete this file, plus the "output" branch, if you'd rather.
+
 on:
-  schedule:
-    - cron: "0 */12 * * *"      # twice a day
   workflow_dispatch:            # manual run button
-  push:
-    branches: [main, master]
 
 permissions:
   contents: write

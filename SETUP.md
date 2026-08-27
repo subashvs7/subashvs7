@@ -1,205 +1,185 @@
 # Profile Setup
 
-Everything here is one-time. Once done, the profile maintains itself.
+The README is now **projects-first**. Everything below is one-time.
 
 ---
 
-## 1 · Why the images were broken
+## 1 · Why images kept breaking, and what replaced them
 
-Three of the render services the old README relied on are **dead**, not slow.
-Measured directly:
+Measured directly, not guessed:
 
-| Asset | Result | Verdict |
+| Asset | Result | Outcome |
 |---|---|---|
-| `github-readme-stats.vercel.app` | `503` on 3/3 retries | Public instance exhausted |
-| `github-profile-trophy.vercel.app` | `402 DEPLOYMENT_DISABLED` | Vercel disabled the deployment |
-| `github-readme-activity-graph.vercel.app` | `402 DEPLOYMENT_DISABLED` | Same |
-| `./profile-3d-contrib/*.svg` | `404` | Folder never existed — see §3 |
-| snake, capsule-render, typing-svg, skillicons, shields, komarev, streak-stats | `200` | Healthy, kept |
+| `github-readme-stats.vercel.app` | `503` on 3/3 retries | Public instance exhausted — dropped |
+| `github-profile-trophy.vercel.app` | `402 DEPLOYMENT_DISABLED` | Vercel disabled it — dropped |
+| `github-readme-activity-graph.vercel.app` | `402 DEPLOYMENT_DISABLED` | Same — dropped |
+| capsule-render `type=venom` | Renders a small blob; title overflows outside it | Replaced by `assets/hero.png` |
+| Self-hosted metrics languages panel | Rendered **"PowerShell 100%"** | Removed — see §2 |
+| shields.io, skillicons, capsule-render (`rect`/`waving`) | `200` | Kept |
 
-A `402` is not transient — those two apps are gone and will not come back.
-So the fix isn't a different URL, it's **not depending on someone else's
-server**. `.github/workflows/metrics.yml` now renders the same panels into
-`./assets/` inside this repo, where GitHub serves them itself.
-
----
-
-## 2 · Create `METRICS_TOKEN` *(recommended, 2 minutes)*
-
-The metrics workflow falls back to the built-in `GITHUB_TOKEN`, but that token
-can't see private-repo contributions or cross-repo language data — panels will
-render thin. To get the full picture:
-
-1. <https://github.com/settings/tokens> → **Generate new token (classic)**
-2. Name it `METRICS_TOKEN`, expiry **No expiration**
-3. Scopes: **`public_repo`** and **`read:user`**
-   *(add **`repo`** if you want private contributions counted)*
-4. Copy the token
-5. Go to <https://github.com/subashvs7/subashvs7/settings/secrets/actions>
-   → **New repository secret** → name `METRICS_TOKEN`, paste the value
+A `402` is not transient — those apps are gone. The fix was to stop depending
+on other people's servers: `assets/hero.png` and the social cards are generated
+locally and committed here.
 
 ---
 
-## 3 · Push, then run the workflows once
+## 2 · Why there are no auto-generated stats
+
+This is the part worth not undoing.
+
+Your public account has **~2 public events**. Every activity visual — snake,
+3D skyline, isocalendar, streak, habits — rendered as an empty grid. Five
+sections all advertising the same emptiness, while your actual work (a 12-module
+approval platform, a real-time Kanban, four client systems) went unmentioned
+until halfway down the page.
+
+The languages panel was worse. Without a PAT the action can only see *this*
+repo, so it reported **"1 Language: PowerShell 100%"** — picked up from
+`scripts/gen-social-previews.mjs`. Even with a PAT it counts public repos only,
+and your main platforms are private, so the figure would still mislead.
+
+So: no activity panels, no generated language chart. The README uses a curated
+skillicons stack, which is accurate. `metrics.yml`, `snake.yml` and
+`profile-3d.yml` are kept but set to `workflow_dispatch` only — dormant, not
+deleted, with the reasoning in each file's header. Delete them (plus the
+`output` branch and `profile-3d-contrib/`) if you'd rather.
+
+**If public activity grows later:** add a `METRICS_TOKEN` secret (classic PAT,
+scopes `public_repo` + `read:user`) at
+<https://github.com/subashvs7/subashvs7/settings/secrets/actions>, restore the
+`schedule`/`push` triggers, and re-add the `<img>` tags. Keep
+`output_action: commit` — see §7.
+
+---
+
+## 3 · Finish the README
+
+Four private projects carry inferred one-line summaries. **Correct them before
+pushing** — they're marked in the source with `TODO(subash)`:
+
+```bash
+grep -n "TODO(subash)" README.md
+```
+
+- **Meenachi Express Cargo** — confirm summary
+- **PSS Transport** — confirm summary
+- **Proman** — confirm summary
+- **SAS** — I could not read this repo at all; replace the line entirely
+
+Also still literal:
+
+- `https://linkedin.com/in/YOUR-LINKEDIN`
+
+The Twitter badge was removed and email is set to `subash07070707@gmail.com`.
+
+Then:
 
 ```bash
 git add -A
-git commit -m "fix: self-host profile panels; redesign README"
+git commit -m "redesign: projects-first profile, self-hosted hero"
 git push
 ```
 
-`metrics.yml`, `profile-3d.yml` and `snake.yml` all now trigger on push, so
-they start immediately. Watch them at
-<https://github.com/subashvs7/subashvs7/actions>.
-
-> **Expect ~3 minutes of broken images right after the push.** The README
-> references `./assets/*.svg` and `./profile-3d-contrib/*.svg` before the
-> workflows have created them. Once the runs go green, refresh your profile.
-
-`profile-3d.yml` previously had **only** a `schedule:` trigger, which is why it
-had never executed and the skyline image 404'd. It now has `push` and
-`workflow_dispatch` too.
-
-**If a run fails**, open it and check:
-- `metrics.yml` — usually a bad/missing `METRICS_TOKEN`. Plugin errors are
-  non-fatal (`plugins_errors_fatal: no`), so partial output still commits.
-- `snake.yml` — needs the `output` branch, which already exists here.
-
-### Known trap: `output_action`
-
-The first `metrics.yml` run failed at the commit step even though all five
-panels rendered. Cause: with `output_action: none`, the action writes the SVG
-to `/metrics_renders/` **inside its container**, never to the workspace — so a
-follow-up `git add -A assets` matches nothing and exits non-zero.
-
-Each step now uses `output_action: commit`, which writes the file through the
-GitHub API directly. **Do not** switch it back to `none` plus a manual commit
-step. `output_condition: changed` keeps it from producing empty commits.
-
 ---
 
-## 4 · The Repositories tab
-
-GitHub gives you **no styling control** over the Repositories, Projects,
-Packages or Stars tabs. There is no CSS, no custom layout. What you control is
-the content, and right now yours is empty — of 15 public repos, **11 have no
-description and 0 have topics**. That is the entire reason the tab looks bare.
-
-Fix it in one shot:
-
-```powershell
-winget install --id GitHub.cli
-gh auth login                          # needs the "repo" scope
-
-# Read and correct the descriptions first — they are inferred guesses.
-.\scripts\setup-repos.ps1 -WhatIf      # dry run, prints what it would set
-.\scripts\setup-repos.ps1              # apply
-```
-
-Then, per repo, the three things that actually change how the tab reads:
-
-- **Description** — shown inline in the list. Non-negotiable.
-- **Topics** — render as pills under each repo. 4–6 each.
-- **Social preview image** — repo *Settings → Social preview*, 1280×640.
-  Cards are already generated for the pinned six; see §5.
-
-Archive dead repos (*Settings → Archive*) so they sort to the bottom instead of
-padding the list.
-
-> **On 3D here:** you cannot put the contribution skyline — or any image — on
-> the Repositories tab. GitHub renders that list from its own templates: no
-> README hook, no custom CSS, no injected HTML. Only the fields above render.
-> The social preview cards in §5 are the closest thing a repo has to cover art.
-
----
-
-## 5 · Social preview cards
-
-`social-previews/` holds a 1280×640 PNG per pinned repo, themed to match the
-profile: isometric voxel plinth, violet gradient, tech pills. Each skyline is
-seeded from the repo name, so every card is unique but stable across rebuilds.
-
-Regenerate any time (needs Chrome, which the script auto-detects):
+## 4 · Regenerating the images
 
 ```bash
 node scripts/gen-social-previews.mjs
 ```
 
-Edit the `REPOS` array in
-[`scripts/gen-social-previews.mjs`](scripts/gen-social-previews.mjs) to change
-titles, taglines or tags, or to add the remaining eight repos.
+Renders via headless Chrome (auto-detected):
 
-**Uploading is manual — GitHub has no API for this field.** For each repo:
+- `assets/hero.png` — 1280×360 profile banner, referenced by README.md
+- `social-previews/approval_project.png` — 1280×640
+- `social-previews/task-management.png` — 1280×640
+
+Each isometric skyline is seeded from its own name, so images are unique but
+stable across rebuilds. Edit the `REPOS` array and `heroHtml()` in
+[`scripts/gen-social-previews.mjs`](scripts/gen-social-previews.mjs) to change
+copy, or to add cards for more repos.
+
+---
+
+## 5 · Upload the social previews
+
+**Manual — GitHub has no API for this field.** Per repo:
 
 1. `https://github.com/subashvs7/<repo>/settings`
-2. Scroll to **Social preview** → **Edit** → **Upload an image**
+2. **Social preview** → **Edit** → **Upload an image**
 3. Pick `social-previews/<repo>.png`
 
-Where these actually show up: link unfurls on LinkedIn, Slack, Discord, X and
-iMessage. They do **not** appear in the Repositories tab list.
-
-| File | Repo |
-|---|---|
-| `task-management.png` | task-management |
-| `laravel-dashboard.png` | laravel-dashboard |
-| `CRM-ZAZU.png` | CRM-ZAZU |
-| `budgetapp.png` | budgetapp |
-| `spicemart.png` | spicemart |
-| `react-reddit.png` | react-reddit |
+These show in link unfurls on LinkedIn, Slack, Discord, X and iMessage. They do
+**not** appear in the Repositories tab.
 
 ---
 
-## 6 · Pinned repositories
+## 6 · The Repositories tab
 
-The strongest lever on the Overview tab. Profile → **Customize your pins**.
+GitHub gives you **no styling control** over the Repositories, Projects,
+Packages or Stars tabs — no CSS, no README hook, no injected HTML. You cannot
+put the 3D skyline, or any image, on that list. Only these render: name,
+description, topics, language, stars, forks, updated date, license.
 
-Pin exactly six, ordered by what you want judged first:
+Of your 15 public repos, **11 have no description and 0 have topics**. That is
+why the tab looks bare. Fix it in one pass:
 
-1. `task-management` — the TypeScript one
-2. `laravel-dashboard` — reusable foundation
-3. `CRM-ZAZU` — real business domain
-4. `budgetapp` — complete small product
+```powershell
+winget install --id GitHub.cli
+gh auth login                          # needs the "repo" scope
+
+# Read and correct the descriptions first -- most are inferred guesses.
+.\scripts\setup-repos.ps1 -WhatIf      # dry run
+.\scripts\setup-repos.ps1              # apply
+```
+
+Archive dead repos (*Settings → Archive*) so they sort to the bottom.
+
+### Pinned repositories
+
+Profile → **Customize your pins**. Private repos can be pinned but are visible
+only to you, so pin public ones. Lead with the flagship:
+
+1. `approval_project` — the 12-module platform
+2. `task-management` — TypeScript + real-time
+3. `laravel-dashboard` — reusable foundation
+4. `CRM-ZAZU` — business domain
 5. `spicemart` — e-commerce breadth
-6. `react-reddit` — API consumption
+6. `budgetapp` — complete small product
 
-A pinned repo with no description is a wasted slot, so run §4 first.
+Run the script above first — a pinned repo with no description wastes the slot.
 
----
+### Per-repo READMEs
 
-## 7 · Per-repo READMEs
+`templates/REPO_README_TEMPLATE.md` matches the profile theme. Note that
+`approval_project` already has an excellent README — leave it alone. Start with
+`task-management`, whose README is currently just `# task-management`.
 
-`templates/REPO_README_TEMPLATE.md` is a designed README matching the profile
-theme — hero banner, stack icons, live shields, features table, setup steps.
+While you're there: `task-management` has a committed `backend.zip`. Build
+artifacts don't belong in git — delete it and add it to `.gitignore`.
 
-Copy it into each pinned repo, replace `{{REPO}}`, `{{TITLE}}`, `{{TAGLINE}}`
-and `{{ICONS}}`, and add real screenshots under `docs/`. Start with the six
-pinned ones; the rest can wait.
+### Projects and Stars
 
----
+**Projects** — an empty tab is worse than a hidden one. Build one real board
+with a populated backlog, or leave it.
 
-## 8 · Projects and Stars tabs
+**Stars** — GitHub supports named **star lists**
+(<https://github.com/subashvs7?tab=stars> → **Create list**), e.g.
+`Laravel Ecosystem`, `React Patterns`. Almost nobody uses them, and it's the
+only tab besides Overview where you write real copy.
 
-**Projects** — an empty tab is worse than a hidden one. Either build one real
-board (<https://github.com/users/subashvs7/projects>) with a description and a
-populated backlog, or leave the tab alone. A single well-run board reads better
-than four abandoned ones.
-
-**Stars** — GitHub supports **star lists**: named, described collections. Go to
-<https://github.com/subashvs7?tab=stars> → **Create list**. Something like
-`Laravel Ecosystem`, `React Patterns`, `DevOps & CI`. This is the only tab
-besides Overview where you get to write real copy, and almost nobody uses it.
-
-**Packages** — only populates if you publish to npm/Composer/GHCR. Nothing to
-design until then; ignore it.
+**Packages** — only populates if you publish to npm/Composer/GHCR. Ignore it.
 
 ---
 
-## 9 · Fill in the placeholders
+## 7 · Known trap: `output_action`
 
-Still literal `YOUR-*` values in `README.md`:
+Recorded so it isn't reintroduced. The first `metrics.yml` run failed at the
+commit step even though all five panels rendered. With `output_action: none`,
+lowlighter/metrics writes the SVG to `/metrics_renders/` **inside its
+container**, never to the workspace — so a follow-up `git add -A assets`
+matches nothing and exits non-zero.
 
-- `https://linkedin.com/in/YOUR-LINKEDIN`
-- `https://twitter.com/YOUR-HANDLE`
-
-The email is already set to `subash07070707@gmail.com`. Delete the Twitter
-badge entirely if you don't use it — a dead link costs more than a missing one.
+`output_action: commit` writes through the GitHub API instead. Never pair
+`none` with a manual commit step. `output_condition: changed` prevents empty
+commits.

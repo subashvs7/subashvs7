@@ -52,8 +52,8 @@ $Repos = @{
         topics = @("mysql", "database", "schema-diff", "devtools", "migration")
     }
     "approval_project" = @{
-        desc   = "Multi-level approval workflow engine on Laravel with configurable stages and role-based sign-off."
-        topics = @("laravel", "php", "workflow", "approval-workflow", "rbac", "mysql")
+        desc   = "Enterprise approval management system: database-driven workflows, RBAC, notifications and reporting on Laravel 12 + React 19."
+        topics = @("laravel", "react", "php", "approval-workflow", "rbac", "mysql", "erp", "typescript")
     }
     "spicemart" = @{
         desc   = "E-commerce storefront with catalogue, cart and checkout, plus an admin side for inventory and orders."

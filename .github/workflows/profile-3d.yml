@@ -4,14 +4,13 @@ name: 3D Contribution Skyline
 # ./profile-3d-contrib/profile-night-rainbow.svg 404'd in the README.
 # push + workflow_dispatch make it render on the very first commit.
 
+# DORMANT. The README no longer shows the skyline -- with ~2 public events
+# the render is a near-flat plane. Left in place (manual trigger only) so it
+# can be switched back on if public activity picks up.
+# Safe to delete this file, plus the profile-3d-contrib/ folder, if you'd rather.
+
 on:
-  schedule:
-    - cron: "30 18 * * *"     # 00:00 IST daily
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/profile-3d.yml
 
 permissions:
   contents: write
